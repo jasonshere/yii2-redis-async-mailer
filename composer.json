@@ -1,8 +1,6 @@
 {
-    // package name
     "name": "jason/yii2-redis-async-mailer",
 
-    // package type
     "type": "yii2-extension",
 
     "description": "The Async mailer for the Yii framework",
@@ -20,13 +18,11 @@
         }
     ],
 
-    // package dependencies
     "require": {
         "yiisoft/yii2": "*",
         "yiisoft/yii2-redis": "~2.0.0"
     },
 
-    // class autoloading specs
     "autoload": {
         "psr-4": {
             "jason\\mailerqueue\\": "./src"
