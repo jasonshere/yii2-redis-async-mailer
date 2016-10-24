@@ -3,7 +3,7 @@
  * Message.php
  * @author JasonLee http://www.mr-jason.com
  */
-namespace jason\mailerqueue;
+namespace doctorjason\mailerqueue;
 use Yii;
 
 /**

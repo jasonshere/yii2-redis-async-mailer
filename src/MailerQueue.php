@@ -3,7 +3,7 @@
  * MailierQueue.php
  * @author Jason Lee http://www.mr-jason.com
  */
-namespace jason\mailerqueue;
+namespace doctorjason\mailerqueue;
 
 use Yii;
 use yii\swiftmailer\Mailer;
@@ -18,7 +18,7 @@ use yii\swiftmailer\Message;
  *  'components' => [
  *      ...
  *      'mailerqueue' => [
- *          'class' => 'jason\mailerqueue\MailerQueue',
+ *          'class' => 'doctorjason\mailerqueue\MailerQueue',
  *          'db' => '1',
  *          'key' => 'mailer',
  *          'transport' => [
@@ -47,7 +47,7 @@ class MailerQueue extends Mailer
      * @var string message default class name.
      *   
      */
-    public $messageClass = 'jason\mailerqueue\Message';
+    public $messageClass = 'doctorjason\mailerqueue\Message';
 
     /**
      * @var string key name
