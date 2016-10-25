@@ -30,13 +30,13 @@ class Message extends \yii\swiftmailer\Message
             throw new \yii\base\InvalidConfigException('redis connected failed.');
         }
         $item = [];
-        $item['from'] = isset($this->from) ? array_keys((array)$this->from) : [];
-        $item['to'] = isset($this->getTo()) ? array_keys((array)$this->getTo()) : [];
-        $item['cc'] = isset($this->getCc()) ? array_keys((array)$this->getCc()) : [];
-        $item['bcc'] = isset($this->getBcc()) ? array_keys((array)$this->getBcc()) : [];
-        $item['reply_to'] = isset($this->getReplyTo()) ? array_keys((array)$this->getReplyTo()) : [];
-        $item['charset'] = isset($this->getCharset()) ? $this->getCharset() : 'utf-8';
-        $item['subject'] = isset($this->getSubject()) ? $this->getSubject() : '';
+        $item['from'] = !empty($this->from) ? array_keys((array)$this->from) : [];
+        $item['to'] = !empty($this->getTo()) ? array_keys((array)$this->getTo()) : [];
+        $item['cc'] = !empty($this->getCc()) ? array_keys((array)$this->getCc()) : [];
+        $item['bcc'] = !empty($this->getBcc()) ? array_keys((array)$this->getBcc()) : [];
+        $item['reply_to'] = !empty($this->getReplyTo()) ? array_keys((array)$this->getReplyTo()) : [];
+        $item['charset'] = !empty($this->getCharset()) ? $this->getCharset() : 'utf-8';
+        $item['subject'] = !empty($this->getSubject()) ? $this->getSubject() : '';
         $parts = $this->getSwiftMessage()->getChildren();
         // if message has no parts, use message
         if ( !is_array($parts) || !sizeof($parts) ) {
